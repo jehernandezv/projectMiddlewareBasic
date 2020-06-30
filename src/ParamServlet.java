@@ -6,10 +6,10 @@ public class ParamServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
-	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	public void doPost(final HttpServletRequest req, final HttpServletResponse res) throws ServletException, IOException {
 		// Obtenemos un objeto Print Writer para enviar respuesta
 		res.setContentType("text/html");
-		PrintWriter pw = res.getWriter();
+		final PrintWriter pw = res.getWriter();
 		pw.println("<HTML><HEAD><TITLE>Leyendo parámetros</TITLE></HEAD>");
 		pw.println("<BODY BGCOLOR=\"#CCBBAA\">");
 		pw.println("<H2>Leyendo parámetros desde un formulario html</H2><P>");
