@@ -22,12 +22,13 @@
               <div class="card-body">
                 <img class="Image-fluid w-50" src="https://upanama.e-ducativa.com/archivos/repositorio//6000/6126/html/servidor.jpg">
                 <ul class="list-unstyled mt-3 mb-4">
-                <form action="ipStatus" method="GET">
+                <form name="form1" action="ipStatus" value="" method="GET">
                   <li><input type="text" name="ipServer" class="form-control mb-2"  aria-describedby="emailHelp" placeholder="Ingrese IP del servidor"></li>
                   <li><button type="submit" class="btn btn-lg btn-block btn-outline-primary">Estado</button></li>
                 </form>
-                <form action="rebootServer" method="GET" class="mt-2">
-                  <li><button type="submit" name="rebootButton" class="btn btn-lg btn-block btn-outline-primary">Reiniciar</button></li>
+                <form name="form2" action="rebootServer" method="GET" class="mt-2">
+                  <input type="hidden" value="" name="ipServer2" onkeyup="form1.ipServer.value=form2.ipServer2.value" class="form-control mb-2"  aria-describedby="emailHelp" placeholder="Ingrese IP del servidor">
+                  <li><button onclick="document.form2.ipServer2.value= document.form1.ipServer.value" type="submit" name="rebootButton" class="btn btn-lg btn-block btn-outline-primary">Reiniciar</button></li>
                 </form>   
                 </ul>
                     
