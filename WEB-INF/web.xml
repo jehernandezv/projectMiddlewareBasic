@@ -1,13 +1,25 @@
 <web-app>
 
 <servlet>
-<servlet-name>sonoojaiswal</servlet-name>
-<servlet-class>DemoServ</servlet-class>
+<servlet-name>ServerStatus</servlet-name>
+<servlet-class>ssh.DemoServ</servlet-class>
 </servlet>
 
+<servlet>
+<servlet-name>ServerReboot</servlet-name>
+<servlet-class>ssh.RebootServ</servlet-class>
+</servlet>
+
+
 <servlet-mapping>
-<servlet-name>sonoojaiswal</servlet-name>
+<servlet-name>ServerStatus</servlet-name>
 <url-pattern>/ipStatus</url-pattern>
 </servlet-mapping>
+
+<servlet-mapping>
+<servlet-name>ServerReboot</servlet-name>
+<url-pattern>/rebootServer</url-pattern>
+</servlet-mapping>
+
 
 </web-app>
